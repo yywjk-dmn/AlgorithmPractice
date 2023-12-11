@@ -4,16 +4,16 @@
 #include <string.h>
 
 
-#define MAXSIZE 20    //生成多大的数组
+#define ARRAYSIZE 20    //生成多大的数组
 #define RANGE 100    //生成随机数的大小
 
 int main()
 {
     srand(time(NULL));
-    int randomArray[MAXSIZE];
+    int randomArray[ARRAYSIZE];
     memset(randomArray, 0, sizeof(randomArray));
     int target;
-    for (int idx = 0; idx < MAXSIZE; idx++)     //生成随机数组
+    for (int idx = 0; idx < ARRAYSIZE; idx++)     //生成随机数组
     {
         int num = rand() % RANGE + 1;     //生成1-100的随机数
         randomArray[idx] = num;       //将生成的随机数放在数组里
@@ -25,9 +25,9 @@ int main()
     int firstNum,secondNum;;    //开始遍历的数字
     int idx,index;      //索引
     int flag = 0;
-    for(idx = 0; idx < MAXSIZE; idx++)
+    for(idx = 0; idx < ARRAYSIZE - 1; idx++)
     {
-        for (index = idx + 1; index < MAXSIZE; index++)
+        for (index = idx + 1; index < ARRAYSIZE; index++)
         {
             firstNum = randomArray[idx];
             secondNum = randomArray[index];
