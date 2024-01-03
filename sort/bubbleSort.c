@@ -69,7 +69,7 @@ void bubbleSort(int *array, int arraySize)
 }
 int main()
 {
-    int array[] = {22, 34,12, 23, 56, 90, 4, 104, 35, 71};
+    int array[] = {22, 34, 12, 23, 56, 90, 4, 104, 35, 71};
 
     int len = sizeof(array) / sizeof(array[0]);
     bubbleSort(array, len);
